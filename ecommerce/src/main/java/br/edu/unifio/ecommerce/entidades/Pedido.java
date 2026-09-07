@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,15 +18,16 @@ import lombok.Setter;
 
 public class Pedido {
 
-    @Id
-
+   @Id
    @GeneratedValue (strategy = GenerationType.IDENTITY)
-
-   private Integer id;
+    private Integer id;
+   
    private LocalDateTime data;
    private String status;
    private BigDecimal valortotal;
-   private Cliente cliente;
-
+   
+    @ManyToOne 
+    @JoinColumn (name = "cliente_id")
+    private Cliente cliente;
     
 }

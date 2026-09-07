@@ -19,11 +19,8 @@ public class Produto {
     private Integer id;
 
     private String nome;
-
     private String descricao;
-
     private Short estoque;
-
     private BigDecimal preco;
 
     @ManyToOne

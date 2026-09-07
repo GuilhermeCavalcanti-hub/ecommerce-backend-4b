@@ -16,6 +16,5 @@ public class Categoria {
     private Short id;
 
     private String nome;
-
     private String descricao;
 }
